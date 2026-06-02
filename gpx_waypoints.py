@@ -9,6 +9,78 @@ import argparse
 import xml.etree.ElementTree as ET
 
 
+def decimal_to_dms(decimal_degrees, is_latitude=True):
+    """
+    Convert decimal degrees to Degrees Minutes Seconds format.
+    
+    Args:
+        decimal_degrees: Decimal degree value (float)
+        is_latitude: True for latitude, False for longitude
+    
+    Returns:
+        String in format: DD°MM'SS.S"[N/S/E/W]
+    """
+    try:
+        decimal_value = float(decimal_degrees)
+    except (ValueError, TypeError):
+        return decimal_degrees
+    
+    # Determine cardinal direction
+    if is_latitude:
+        cardinal = 'N' if decimal_value >= 0 else 'S'
+    else:
+        cardinal = 'E' if decimal_value >= 0 else 'W'
+    
+    # Work with absolute value
+    abs_value = abs(decimal_value)
+    
+    # Extract degrees
+    degrees = int(abs_value)
+    
+    # Extract decimal minutes (decimal part * 60)
+    minutes_decimal = (abs_value - degrees) * 60
+    minutes = int(minutes_decimal)
+    
+    # Extract seconds from remaining decimal
+    seconds = (minutes_decimal - minutes) * 60
+    
+    return f'{degrees}°{minutes}\'{seconds:.1f}"{cardinal}'
+
+
+def decimal_to_dm(decimal_degrees, is_latitude=True):
+    """
+    Convert decimal degrees to Degrees Decimal Minutes format.
+    
+    Args:
+        decimal_degrees: Decimal degree value (float)
+        is_latitude: True for latitude, False for longitude
+    
+    Returns:
+        String in format: DD°MM.MMM'[N/S/E/W]
+    """
+    try:
+        decimal_value = float(decimal_degrees)
+    except (ValueError, TypeError):
+        return decimal_degrees
+    
+    # Determine cardinal direction
+    if is_latitude:
+        cardinal = 'N' if decimal_value >= 0 else 'S'
+    else:
+        cardinal = 'E' if decimal_value >= 0 else 'W'
+    
+    # Work with absolute value
+    abs_value = abs(decimal_value)
+    
+    # Extract degrees
+    degrees = int(abs_value)
+    
+    # Extract decimal minutes (decimal part * 60)
+    minutes_decimal = (abs_value - degrees) * 60
+    
+    return f'{degrees}°{minutes_decimal:.3f}\'{cardinal}'
+
+
 def create_gpx_with_waypoints(waypoints, namespace):
     """
     Create a new GPX ElementTree with only waypoints (no tracks).
@@ -52,13 +124,14 @@ def create_gpx_with_waypoints(waypoints, namespace):
     return ET.ElementTree(gpx)
 
 
-def parse_gpx_waypoints(gpx_file, format_type='us-csv'):
+def parse_gpx_waypoints(gpx_file, format_type='us-csv', gps_format=None):
     """
     Parse a GPX file and extract waypoints.
     
     Args:
         gpx_file: Path to the GPX file
         format_type: Output format ('us-csv', 'eu-csv', or 'gpx-wp')
+        gps_format: GPS coordinate format (None or 'DDM' for Degrees Decimal Minutes)
     """
     try:
         tree = ET.parse(gpx_file)
@@ -112,10 +185,18 @@ def parse_gpx_waypoints(gpx_file, format_type='us-csv'):
                     # US format: "name", lat, lon
                     print(f'"{name}", {lat}, {lon}')
                 elif format_type == 'eu-csv':
-                    # EU format: "name"; lat, lon (with comma as decimal separator)
-                    lat_eu = str(lat).replace('.', ',') if lat != 'N/A' else lat
-                    lon_eu = str(lon).replace('.', ',') if lon != 'N/A' else lon
-                    print(f'"{name}"; {lat_eu}; {lon_eu}')
+                    # EU format with optional DMS/DM conversion
+                    if gps_format == 'DMS':
+                        lat_formatted = decimal_to_dms(lat, is_latitude=True)
+                        lon_formatted = decimal_to_dms(lon, is_latitude=False)
+                    elif gps_format == 'DM':
+                        lat_formatted = decimal_to_dm(lat, is_latitude=True)
+                        lon_formatted = decimal_to_dm(lon, is_latitude=False)
+                    else:
+                        # Replace dots with commas for decimal separator
+                        lat_formatted = str(lat).replace('.', ',') if lat != 'N/A' else lat
+                        lon_formatted = str(lon).replace('.', ',') if lon != 'N/A' else lon
+                    print(f'"{name}"; {lat_formatted}; {lon_formatted}')
     
     except FileNotFoundError:
         print(f"Error: File '{gpx_file}' not found.")
@@ -142,9 +223,15 @@ def main():
         default='us-csv',
         help='Output format: us-csv (default), eu-csv, or gpx-wp (GPX file with waypoints only)'
     )
+    parser.add_argument(
+        '--gps',
+        choices=['DMS', 'DM'],
+        default=None,
+        help='GPS coordinate format: DMS (Degrees Minutes Seconds) or DM (Degrees Decimal Minutes) for use with --format eu-csv'
+    )
     
     args = parser.parse_args()
-    parse_gpx_waypoints(args.gpx_file, args.format)
+    parse_gpx_waypoints(args.gpx_file, args.format, args.gps)
 
 
 if __name__ == "__main__":
