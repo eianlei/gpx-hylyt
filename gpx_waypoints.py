@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """
-Script to read a GPX file and print waypoints in format: name; lat; lon
+Script to read a GPX file and print waypoints in different formats
 """
 
 import sys
+import argparse
 import xml.etree.ElementTree as ET
 
 
-def parse_gpx_waypoints(gpx_file):
+def parse_gpx_waypoints(gpx_file, format_type='us-csv'):
     """
     Parse a GPX file and extract waypoints.
     
     Args:
         gpx_file: Path to the GPX file
+        format_type: Output format ('us-csv' or 'eu-csv')
     """
     try:
         tree = ET.parse(gpx_file)
@@ -30,6 +32,12 @@ def parse_gpx_waypoints(gpx_file):
             print("No waypoints found in the GPX file.")
             return
         
+        # Print header based on format type
+        if format_type == 'us-csv':
+            print('"waypoint", "lat", "lon"')
+        elif format_type == 'eu-csv':
+            print('"waypoint"; "lat"; "lon"')
+        
         # Extract and print waypoint information
         for waypoint in waypoints:
             lat = waypoint.get('lat', 'N/A')
@@ -42,7 +50,15 @@ def parse_gpx_waypoints(gpx_file):
             
             name = name_elem.text if name_elem is not None else 'Unknown'
             
-            print(f"{name}; {lat}; {lon}")
+            # Format output based on format_type
+            if format_type == 'us-csv':
+                # US format: "name", lat, lon
+                print(f'"{name}", {lat}, {lon}')
+            elif format_type == 'eu-csv':
+                # EU format: "name"; lat, lon (with comma as decimal separator)
+                lat_eu = str(lat).replace('.', ',') if lat != 'N/A' else lat
+                lon_eu = str(lon).replace('.', ',') if lon != 'N/A' else lon
+                print(f'"{name}"; {lat_eu}; {lon_eu}')
     
     except FileNotFoundError:
         print(f"Error: File '{gpx_file}' not found.")
@@ -56,12 +72,22 @@ def parse_gpx_waypoints(gpx_file):
 
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python gpx_waypoints.py <gpx_file>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description='Read a GPX file and print waypoints in different formats'
+    )
+    parser.add_argument(
+        'gpx_file',
+        help='Path to the GPX file'
+    )
+    parser.add_argument(
+        '--format',
+        choices=['us-csv', 'eu-csv'],
+        default='us-csv',
+        help='Output format: us-csv (default) or eu-csv'
+    )
     
-    gpx_file = sys.argv[1]
-    parse_gpx_waypoints(gpx_file)
+    args = parser.parse_args()
+    parse_gpx_waypoints(args.gpx_file, args.format)
 
 
 if __name__ == "__main__":
