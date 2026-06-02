@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gpx version="1.1" creator="gpx_waypoints.py" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"><wpt lat="60.15883326" lon="25.94950079"><time>2019-08-24T10:20:19Z</time>
+        <name>RAIMOR</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.18055157" lon="26.02730423"><time>2019-08-25T09:35:54Z</time>
+        <name>MFP498</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.19797770" lon="25.99981344"><time>2019-08-24T19:28:44Z</time>
+        <name>LEA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.10445668" lon="24.85046417"><time>2020-06-01T19:27:42Z</time>
+        <name>RYSAKARIN HYLKY</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.10445219" lon="24.85046417"><time>2020-06-01T19:27:18Z</time>
+        <name>042</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.10373339" lon="24.82769639"><time>2017-08-21T17:51:24Z</time>
+        <name>012</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.02092172" lon="25.52258238"><time>2017-07-30T15:36:59Z</time>
+        <name>011</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82911226" lon="24.49574288"><time>2017-09-29T16:34:03Z</time>
+        <name>013</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82911226" lon="24.49574288"><time>2017-09-29T16:34:05Z</time>
+        <name>014</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.80216630" lon="24.06756260"><time>2018-07-10T13:01:10Z</time>
+        <name>WASA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.02066950" lon="24.87834254"><time>2018-06-17T12:00:57Z</time>
+        <name>ORION PANNU</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82905790" lon="24.49556261"><time>2017-06-11T13:55:30Z</time>
+        <name>SANDVIKEN</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.97978513" lon="24.58998671"><time>2017-07-14T13:01:44Z</time>
+        <name>SVARTHALLEN 1</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.85125634" lon="24.44310478"><time>2017-07-13T14:24:18Z</time>
+        <name>M97 TORNI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.73342494" lon="22.17892746"><time>2019-07-14T13:21:47Z</time>
+        <name>016</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.85739883" lon="22.85500254"><time>2019-07-21T09:52:59Z</time>
+        <name>SUOMI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.80616471" lon="22.98483117"><time>2019-07-20T15:20:57Z</time>
+        <name>FINN-BALTIC</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.83223325" lon="23.56746461"><time>2019-07-26T16:55:01Z</time>
+        <name>GRAF NIKITA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.85853486" lon="22.85473214"><time>2019-07-21T09:57:20Z</time>
+        <name>OSTERGARDSHARUN</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.13816872" lon="25.02816282"><time>2018-07-28T12:18:37Z</time>
+        <name>ESTEET</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.89754824" lon="24.34139788"><time>2018-07-11T09:52:47Z</time>
+        <name>M451</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.06331613" lon="24.69090043"><time>2018-08-29T20:52:51Z</time>
+        <name>H33</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.73263445" lon="22.17570068"><time>2019-07-12T17:48:03Z</time>
+        <name>INGA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.13278735" lon="25.24937803"><time>2019-06-15T11:18:04Z</time>
+        <name>015</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.73316599" lon="22.17868410"><time>2019-07-14T10:01:04Z</time>
+        <name>SIIVO</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74506650" lon="22.38541482"><time>2019-07-13T13:19:04Z</time>
+        <name>HELSINGFORS EI OLE TASSA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.99769629" lon="25.49512765"><time>2016-08-07T11:40:41Z</time>
+        <name>043</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.99775037" lon="25.49445165"><time>2016-08-06T13:27:42Z</time>
+        <name>KLJUZ</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.92893375" lon="24.39527081"><time>2016-05-22T15:17:46Z</time>
+        <name>041</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.20683285" lon="25.42866304"><time>2015-08-23T13:28:27Z</time>
+        <name>Esa I</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.78108288" lon="21.38706659"><time>2016-07-05T09:36:54Z</time>
+        <name>OLIVA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.95952252" lon="24.38098461"><time>2017-05-26T13:10:57Z</time>
+        <name>ULLAN TYKKIHYLKY</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.94958517" lon="24.41971508"><time>2017-05-27T09:07:23Z</time>
+        <name>KAPASEN FREGATTI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.00682621" lon="24.97753470"><time>2017-06-10T13:52:20Z</time>
+        <name>054</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.99748446" lon="25.49413618"><time>2016-08-07T12:02:01Z</time>
+        <name>KLJUZ PERA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82726852" lon="24.34692308"><time>2016-09-18T12:00:51Z</time>
+        <name>051</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82768077" lon="24.34695913"><time>2016-09-18T11:59:00Z</time>
+        <name>050</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.07691096" lon="25.01199283"><time>2017-05-23T19:34:33Z</time>
+        <name>053</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82764453" lon="24.34685998"><time>2016-09-18T12:10:51Z</time>
+        <name>052</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90342003" lon="24.79402243"><time>2014-09-20T11:56:33Z</time>
+        <name>035</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90344263" lon="24.79388723"><time>2014-09-20T11:56:29Z</time>
+        <name>034</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90351043" lon="24.79379710"><time>2014-09-20T12:02:40Z</time>
+        <name>037</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90356015" lon="24.79395934"><time>2014-09-20T12:02:32Z</time>
+        <name>036</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90332963" lon="24.79347262"><time>2014-09-20T12:03:08Z</time>
+        <name>038</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81238350" lon="24.41486588"><time>2014-08-10T10:06:43Z</time>
+        <name>030</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.94656547" lon="24.48431392"><time>2014-08-16T14:45:49Z</time>
+        <name>LYBECKSHALLARNA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90346523" lon="24.79367992"><time>2014-09-20T11:56:22Z</time>
+        <name>033</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.98618791" lon="24.62615737"><time>2014-09-07T14:28:56Z</time>
+        <name>032</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90351947" lon="24.79415763"><time>2015-08-19T15:16:21Z</time>
+        <name>048</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90624933" lon="24.79323827"><time>2015-08-19T14:50:54Z</time>
+        <name>047</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.97929360" lon="25.53555263"><time>2015-08-23T11:39:20Z</time>
+        <name>040</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.97990688" lon="25.53533630"><time>2015-08-23T11:36:42Z</time>
+        <name>039</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.95190054" lon="24.84433508"><time>2015-07-10T11:01:34Z</time>
+        <name>JUT</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.10391758" lon="24.83556507"><time>2015-05-30T14:52:48Z</time>
+        <name>RYSAKARI 2</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90627645" lon="24.79324728"><time>2015-08-19T14:50:48Z</time>
+        <name>046</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.85109790" lon="24.44298761"><time>2014-08-09T08:32:07Z</time>
+        <name>M-97</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.78080161" lon="22.92856969"><time>2014-07-20T09:52:24Z</time>
+        <name>LENTAVA HOLLANTILAINEN</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74238699" lon="23.06687990"><time>2014-07-17T14:39:46Z</time>
+        <name>007</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82019160" lon="23.67676978"><time>2014-07-25T14:47:17Z</time>
+        <name>CARRONADA-1</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82165966" lon="23.67716637"><time>2014-07-25T19:10:17Z</time>
+        <name>008</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82102532" lon="23.67697709"><time>2014-07-25T14:50:57Z</time>
+        <name>009</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82307329" lon="23.67625602"><time>2014-07-27T12:17:58Z</time>
+        <name>010</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82040003" lon="23.67601266"><time>2014-07-26T22:15:25Z</time>
+        <name>CARRONADA-2</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81239256" lon="24.41453239"><time>2014-08-10T09:52:00Z</time>
+        <name>023</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81225659" lon="24.41468562"><time>2014-08-10T09:51:50Z</time>
+        <name>022</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81241975" lon="24.41497404"><time>2014-08-10T09:54:09Z</time>
+        <name>025</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81256025" lon="24.41507319"><time>2014-08-10T09:53:58Z</time>
+        <name>024</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81219314" lon="24.41473068"><time>2014-08-10T09:54:28Z</time>
+        <name>027</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81228832" lon="24.41484786"><time>2014-08-10T09:54:20Z</time>
+        <name>026</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81235630" lon="24.41474871"><time>2014-08-10T09:56:14Z</time>
+        <name>028</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81241522" lon="24.41501911"><time>2014-08-10T08:32:04Z</time>
+        <name>KOMSO</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81242429" lon="24.41479378"><time>2014-08-10T09:49:18Z</time>
+        <name>021</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.15899024" lon="25.94831103"><time>2013-09-14T11:11:22Z</time>
+        <name>RAIMO</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.89649944" lon="24.43149556"><time>2013-09-07T09:37:01Z</time>
+        <name>Sundsborg</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.61513123" lon="23.05384656"><time>2014-07-17T10:09:57Z</time>
+        <name>IRIS</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74228253" lon="23.06678075"><time>2014-07-17T10:07:00Z</time>
+        <name>M2530</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.61512667" lon="23.05356715"><time>2014-07-17T11:27:55Z</time>
+        <name>002</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.61512667" lon="23.05328774"><time>2014-07-17T11:27:42Z</time>
+        <name>001</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.61516314" lon="23.05406289"><time>2014-07-17T11:30:07Z</time>
+        <name>004</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.61516770" lon="23.05381952"><time>2014-07-17T11:28:06Z</time>
+        <name>003</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74226436" lon="23.06683483"><time>2014-07-17T14:36:49Z</time>
+        <name>006</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.61502637" lon="23.05401782"><time>2014-07-17T11:30:19Z</time>
+        <name>005</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.95792065" lon="24.37112398"><time>2014-06-22T11:54:28Z</time>
+        <name>TYNNYRIHYLKY</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.78773269" lon="21.36753461"><time>2014-06-26T20:01:12Z</time>
+        <name>KLAARA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.69099865" lon="22.44916641"><time>2014-07-09T18:23:53Z</time>
+        <name>B PROOMU</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.60116862" lon="22.39004770"><time>2014-07-09T18:06:36Z</time>
+        <name>SAUKKO</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.79052195" lon="22.29790399"><time>2013-07-09T12:37:24Z</time>
+        <name>LADOGA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.72476494" lon="23.50139659"><time>2013-07-26T23:23:08Z</time>
+        <name>MYSTERY</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82023238" lon="23.67844627"><time>2013-08-03T11:15:16Z</time>
+        <name>RANAP</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82063112" lon="23.67691400"><time>2013-08-03T09:48:56Z</time>
+        <name>HUUVA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82046347" lon="23.67829304"><time>2013-08-03T12:56:01Z</time>
+        <name>KUULIA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.97974905" lon="25.53520110"><time>2013-08-11T09:36:27Z</time>
+        <name>MUNIN</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82064471" lon="23.67665261"><time>2013-08-04T13:21:51Z</time>
+        <name>KAARIA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82041816" lon="23.67597661"><time>2013-08-03T13:17:47Z</time>
+        <name>TYKKI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81866457" lon="23.67300219"><time>2013-08-04T10:50:06Z</time>
+        <name>033JOTAIN</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82082143" lon="23.67663458"><time>2012-08-04T10:26:03Z</time>
+        <name>PERASIN</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82038644" lon="23.67501218"><time>2012-08-04T10:22:13Z</time>
+        <name>LAATIKKO</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82133343" lon="23.66683705"><time>2012-08-03T10:22:28Z</time>
+        <name>PERASIN 1</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82283316" lon="23.66733278"><time>2012-08-03T10:19:42Z</time>
+        <name>KEULA 27M</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82000129" lon="23.66566531"><time>2012-08-03T10:26:14Z</time>
+        <name>KEULAOSA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82150108" lon="23.66366434"><time>2012-08-03T10:25:08Z</time>
+        <name>PERASIN 2</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82033207" lon="23.67866259"><time>2012-08-03T10:28:39Z</time>
+        <name>HYLKYTAVARAA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82033207" lon="23.67700413"><time>2012-08-03T10:27:16Z</time>
+        <name>TYKKI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.79583224" lon="24.35458445"><time>2012-08-26T10:12:09Z</time>
+        <name>Gordyij</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.80201216" lon="24.06828367"><time>2012-08-25T13:25:14Z</time>
+        <name>Wasa keula</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.79552390" lon="24.35456642"><time>2012-08-26T12:18:22Z</time>
+        <name>GORDYIJ PERA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.79608164" lon="24.35486386"><time>2012-08-26T12:17:46Z</time>
+        <name>GORDYIJ KEULA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.13106817" lon="24.88235349"><time>2013-05-26T15:12:10Z</time>
+        <name>MELKIN HYLKY</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82019160" lon="23.67760803"><time>2012-08-04T14:38:35Z</time>
+        <name>TYKKI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81945301" lon="23.67766211"><time>2012-08-04T14:46:13Z</time>
+        <name>PARRUT</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.80228417" lon="24.06731924"><time>2012-08-25T13:24:33Z</time>
+        <name>Wasa pera</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.00679917" lon="24.97659731"><time>2011-08-03T17:08:18Z</time>
+        <name>Konari</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.90341551" lon="24.79383315"><time>2011-09-04T10:50:13Z</time>
+        <name>Akkari</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.98516445" lon="24.62100172"><time>2011-09-25T13:52:08Z</time>
+        <name>JUKTEN</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.05128613" lon="24.98065333"><time>2011-09-17T11:00:16Z</time>
+        <name>HVAL</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.79869791" lon="22.92951610"><time>2011-07-16T08:06:30Z</time>
+        <name>HIENO HYLKY</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.78863526" lon="22.36521586"><time>2011-07-12T16:42:19Z</time>
+        <name>SCHILLER</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.94656547" lon="24.48431392"><time>2011-07-30T13:36:12Z</time>
+        <name>Kuparihylky</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.94894875" lon="24.50870411"><time>2011-07-30T13:38:32Z</time>
+        <name>Edmund</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.20183448" lon="25.59167890"><time>2012-06-16T18:32:40Z</time>
+        <name>KULTA K OIKEA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.86383432" lon="22.30633149"><time>2012-07-12T11:05:51Z</time>
+        <name>METSKARIN GALEONI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.05460224" lon="24.65413488"><time>2011-10-23T10:33:08Z</time>
+        <name>SYSTRARNA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.98631415" lon="24.62348941"><time>2011-09-25T15:39:56Z</time>
+        <name>JUKTEN OHJAUSKOYSI 7M</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.20168219" lon="25.59128231"><time>2012-06-16T16:05:44Z</time>
+        <name>KULTAKALEERI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82133797" lon="23.66945994"><time>2010-08-21T13:02:27Z</time>
+        <name>ENGELSMAN LEHTI</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.85850318" lon="23.35970636"><time>2010-07-31T15:30:51Z</time>
+        <name>Mologna</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.84559719" lon="23.27562061"><time>2010-07-31T10:40:59Z</time>
+        <name>Brannskarin hylky</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.98763513" lon="24.00523512"><time>2010-08-07T11:48:33Z</time>
+        <name>Pohjoinen kotka</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.94895778" lon="24.35960489"><time>2010-08-07T11:47:37Z</time>
+        <name>Linjatauluhylky</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82283316" lon="23.66733278"><time>2010-08-21T10:04:40Z</time>
+        <name>Engelsmans</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.08663481" lon="25.40021683"><time>2010-08-11T17:40:26Z</time>
+        <name>Alca</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.02049835" lon="24.87782877"><time>2010-09-30T16:23:15Z</time>
+        <name>Orion</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.76857800" lon="21.40150602"><time>2010-07-01T16:16:09Z</time>
+        <name>Park Victory</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74538440" lon="21.27545400"><time>2010-07-03T07:37:32Z</time>
+        <name>HARALD</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74485306" lon="21.27559821"><time>2010-07-03T08:37:14Z</time>
+        <name>Harald keula</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.80485009" lon="21.42871739"><time>2010-07-11T18:24:25Z</time>
+        <name>Tukkiproomu</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74556151" lon="21.27558920"><time>2010-07-03T08:41:09Z</time>
+        <name>HARPER</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.92892923" lon="24.39494633"><time>2010-06-27T00:58:35Z</time>
+        <name>Ronnskarin tykit</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.93750019" lon="24.40148102"><time>2010-06-26T23:24:19Z</time>
+        <name>Viljalaiva</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.75216846" lon="23.26833780"><time>2010-07-14T08:42:11Z</time>
+        <name>Eira</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.84791530" lon="23.29935282"><time>2010-07-14T08:41:07Z</time>
+        <name>Eggo</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.87546664" lon="23.86563600"><time>2010-07-14T08:45:36Z</time>
+        <name>Eki</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.08894959" lon="24.98811640"><time>2010-07-14T08:44:12Z</time>
+        <name>Emilie</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.73019020" lon="22.45938758"><time>2010-07-14T08:59:00Z</time>
+        <name>Bengtskarin lautakasa</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.24205060" lon="26.48899623"><time>2010-07-14T08:47:46Z</time>
+        <name>Fivetown london</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.73875340" lon="21.88692122"><time>2010-07-12T18:11:36Z</time>
+        <name>Sparta</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.87324545" lon="22.16415454"><time>2010-07-13T12:39:43Z</time>
+        <name>Alfred</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.83674888" lon="22.75066374"><time>2010-07-14T08:39:13Z</time>
+        <name>Garpen</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.05061567" lon="24.92621256"><time>2010-05-15T09:36:37Z</time>
+        <name>Gustaf Adolf</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.12590114" lon="25.25798581"><time>2010-05-23T07:41:46Z</time>
+        <name>Aleksander II</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.01749862" lon="24.87518785"><time>2010-05-20T21:19:08Z</time>
+        <name>Coolaroo kone</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.14640738" lon="24.84796747"><time>2010-04-29T19:44:51Z</time>
+        <name>Lauri</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.07706832" lon="25.01174947"><time>2010-05-14T19:02:30Z</time>
+        <name>Tiilihylky</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.01783644" lon="24.87684632"><time>2010-05-10T19:37:29Z</time>
+        <name>Coolaroo keula</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.08894959" lon="24.98811640"><time>2010-06-05T13:28:44Z</time>
+        <name>Emilie</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.20780018" lon="25.61752925"><time>2010-06-19T09:29:37Z</time>
+        <name>Chrysant</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.01784996" lon="24.87324998"><time>2010-06-08T17:46:56Z</time>
+        <name>Coolaroo pera</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.82798429" lon="24.34743684"><time>2010-06-23T16:46:38Z</time>
+        <name>Klasu</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.95704975" lon="24.37042995"><time>2010-06-05T12:53:18Z</time>
+        <name>Algo</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.09875078" lon="21.69580166"><time>2010-06-05T13:17:47Z</time>
+        <name>Hindenburg</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.94935046" lon="24.41908414"><time>2010-06-05T13:25:21Z</time>
+        <name>Uunihylky</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.86146754" lon="22.76933043"><time>2010-06-05T13:22:02Z</time>
+        <name>Keulakuva</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.94714325" lon="24.48415168"><time>2020-08-15T14:08:40Z</time>
+        <name>056</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.92859050" lon="24.40231026"><time>2020-08-14T16:12:26Z</time>
+        <name>055</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.01729593" lon="24.87544924"><time>2021-05-30T10:56:54Z</time>
+        <name>058</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.05166860" lon="24.98043701"><time>2020-08-17T17:02:52Z</time>
+        <name>057</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.98632768" lon="24.62416542"><time>2021-06-05T18:37:45Z</time>
+        <name>059</name>
+        <sym>anchor</sym>
+    </wpt><wpt lat="60.19002977" lon="25.39296107"><time>2021-06-03T20:12:49Z</time>
+        <name>DIANA POIJU</name>
+        <sym>anchor</sym>
+    </wpt><wpt lat="59.80227511" lon="24.06761668"><time>2021-06-06T11:08:04Z</time>
+        <name>060</name>
+        <sym>anchor</sym>
+    </wpt><wpt lat="59.82905790" lon="24.49576992"><time>2019-08-01T17:46:37Z</time>
+        <name>020</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.08687304" lon="25.39980222"><time>2019-08-18T15:56:53Z</time>
+        <name>031</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="60.08684158" lon="25.39979320"><time>2019-08-18T15:37:50Z</time>
+        <name>029</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81956630" lon="23.66586360"><time>2019-07-28T10:42:33Z</time>
+        <name>017</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.78608170" lon="23.57725313"><time>2019-07-27T08:43:22Z</time>
+        <name>JEMINNA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.81983364" lon="23.66633230"><time>2019-07-28T10:57:36Z</time>
+        <name>018</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.85128350" lon="24.44278030"><time>2019-07-31T17:35:33Z</time>
+        <name>019</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.76880037" lon="21.40135279"><time>2020-07-01T18:57:51Z</time>
+        <name>044</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74506650" lon="22.39043527"><time>2020-07-17T12:52:39Z</time>
+        <name>HELSINGFORS</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.74285024" lon="22.63716735"><time>2020-07-19T09:47:55Z</time>
+        <name>JUKKA</name>
+        <sym>wreck</sym>
+    </wpt><wpt lat="59.92386600" lon="24.40137286"><time>2020-08-14T16:08:27Z</time>
+        <name>049</name>
+        <sym>wreck</sym>
+    </wpt></gpx>
