@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPX Waypoints Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+        }
+        #info {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info">
+        <strong>Waypoints:</strong> <span id="waypoint-count">0</span>
+    </div>
+    
+    <script>
+        // Waypoints data
+        const waypoints = [{"name": "RAIMOR", "lat": 60.15883326, "lon": 25.94950079}, {"name": "MFP498", "lat": 60.18055157, "lon": 26.02730423}, {"name": "LEA", "lat": 60.1979777, "lon": 25.99981344}, {"name": "RYSAKARIN HYLKY", "lat": 60.10445668, "lon": 24.85046417}, {"name": "042", "lat": 60.10445219, "lon": 24.85046417}, {"name": "012", "lat": 60.10373339, "lon": 24.82769639}, {"name": "011", "lat": 60.02092172, "lon": 25.52258238}, {"name": "013", "lat": 59.82911226, "lon": 24.49574288}, {"name": "014", "lat": 59.82911226, "lon": 24.49574288}, {"name": "WASA", "lat": 59.8021663, "lon": 24.0675626}, {"name": "ORION PANNU", "lat": 60.0206695, "lon": 24.87834254}, {"name": "SANDVIKEN", "lat": 59.8290579, "lon": 24.49556261}, {"name": "SVARTHALLEN 1", "lat": 59.97978513, "lon": 24.58998671}, {"name": "M97 TORNI", "lat": 59.85125634, "lon": 24.44310478}, {"name": "016", "lat": 59.73342494, "lon": 22.17892746}, {"name": "SUOMI", "lat": 59.85739883, "lon": 22.85500254}, {"name": "FINN-BALTIC", "lat": 59.80616471, "lon": 22.98483117}, {"name": "GRAF NIKITA", "lat": 59.83223325, "lon": 23.56746461}, {"name": "OSTERGARDSHARUN", "lat": 59.85853486, "lon": 22.85473214}, {"name": "ESTEET", "lat": 60.13816872, "lon": 25.02816282}, {"name": "M451", "lat": 59.89754824, "lon": 24.34139788}, {"name": "H33", "lat": 60.06331613, "lon": 24.69090043}, {"name": "INGA", "lat": 59.73263445, "lon": 22.17570068}, {"name": "015", "lat": 60.13278735, "lon": 25.24937803}, {"name": "SIIVO", "lat": 59.73316599, "lon": 22.1786841}, {"name": "HELSINGFORS EI OLE TASSA", "lat": 59.7450665, "lon": 22.38541482}, {"name": "043", "lat": 59.99769629, "lon": 25.49512765}, {"name": "KLJUZ", "lat": 59.99775037, "lon": 25.49445165}, {"name": "041", "lat": 59.92893375, "lon": 24.39527081}, {"name": "Esa I", "lat": 60.20683285, "lon": 25.42866304}, {"name": "OLIVA", "lat": 59.78108288, "lon": 21.38706659}, {"name": "ULLAN TYKKIHYLKY", "lat": 59.95952252, "lon": 24.38098461}, {"name": "KAPASEN FREGATTI", "lat": 59.94958517, "lon": 24.41971508}, {"name": "054", "lat": 60.00682621, "lon": 24.9775347}, {"name": "KLJUZ PERA", "lat": 59.99748446, "lon": 25.49413618}, {"name": "051", "lat": 59.82726852, "lon": 24.34692308}, {"name": "050", "lat": 59.82768077, "lon": 24.34695913}, {"name": "053", "lat": 60.07691096, "lon": 25.01199283}, {"name": "052", "lat": 59.82764453, "lon": 24.34685998}, {"name": "035", "lat": 59.90342003, "lon": 24.79402243}, {"name": "034", "lat": 59.90344263, "lon": 24.79388723}, {"name": "037", "lat": 59.90351043, "lon": 24.7937971}, {"name": "036", "lat": 59.90356015, "lon": 24.79395934}, {"name": "038", "lat": 59.90332963, "lon": 24.79347262}, {"name": "030", "lat": 59.8123835, "lon": 24.41486588}, {"name": "LYBECKSHALLARNA", "lat": 59.94656547, "lon": 24.48431392}, {"name": "033", "lat": 59.90346523, "lon": 24.79367992}, {"name": "032", "lat": 59.98618791, "lon": 24.62615737}, {"name": "048", "lat": 59.90351947, "lon": 24.79415763}, {"name": "047", "lat": 59.90624933, "lon": 24.79323827}, {"name": "040", "lat": 59.9792936, "lon": 25.53555263}, {"name": "039", "lat": 59.97990688, "lon": 25.5353363}, {"name": "JUT", "lat": 59.95190054, "lon": 24.84433508}, {"name": "RYSAKARI 2", "lat": 60.10391758, "lon": 24.83556507}, {"name": "046", "lat": 59.90627645, "lon": 24.79324728}, {"name": "M-97", "lat": 59.8510979, "lon": 24.44298761}, {"name": "LENTAVA HOLLANTILAINEN", "lat": 59.78080161, "lon": 22.92856969}, {"name": "007", "lat": 59.74238699, "lon": 23.0668799}, {"name": "CARRONADA-1", "lat": 59.8201916, "lon": 23.67676978}, {"name": "008", "lat": 59.82165966, "lon": 23.67716637}, {"name": "009", "lat": 59.82102532, "lon": 23.67697709}, {"name": "010", "lat": 59.82307329, "lon": 23.67625602}, {"name": "CARRONADA-2", "lat": 59.82040003, "lon": 23.67601266}, {"name": "023", "lat": 59.81239256, "lon": 24.41453239}, {"name": "022", "lat": 59.81225659, "lon": 24.41468562}, {"name": "025", "lat": 59.81241975, "lon": 24.41497404}, {"name": "024", "lat": 59.81256025, "lon": 24.41507319}, {"name": "027", "lat": 59.81219314, "lon": 24.41473068}, {"name": "026", "lat": 59.81228832, "lon": 24.41484786}, {"name": "028", "lat": 59.8123563, "lon": 24.41474871}, {"name": "KOMSO", "lat": 59.81241522, "lon": 24.41501911}, {"name": "021", "lat": 59.81242429, "lon": 24.41479378}, {"name": "RAIMO", "lat": 60.15899024, "lon": 25.94831103}, {"name": "Sundsborg", "lat": 59.89649944, "lon": 24.43149556}, {"name": "IRIS", "lat": 59.61513123, "lon": 23.05384656}, {"name": "M2530", "lat": 59.74228253, "lon": 23.06678075}, {"name": "002", "lat": 59.61512667, "lon": 23.05356715}, {"name": "001", "lat": 59.61512667, "lon": 23.05328774}, {"name": "004", "lat": 59.61516314, "lon": 23.05406289}, {"name": "003", "lat": 59.6151677, "lon": 23.05381952}, {"name": "006", "lat": 59.74226436, "lon": 23.06683483}, {"name": "005", "lat": 59.61502637, "lon": 23.05401782}, {"name": "TYNNYRIHYLKY", "lat": 59.95792065, "lon": 24.37112398}, {"name": "KLAARA", "lat": 59.78773269, "lon": 21.36753461}, {"name": "B PROOMU", "lat": 59.69099865, "lon": 22.44916641}, {"name": "SAUKKO", "lat": 59.60116862, "lon": 22.3900477}, {"name": "LADOGA", "lat": 59.79052195, "lon": 22.29790399}, {"name": "MYSTERY", "lat": 59.72476494, "lon": 23.50139659}, {"name": "RANAP", "lat": 59.82023238, "lon": 23.67844627}, {"name": "HUUVA", "lat": 59.82063112, "lon": 23.676914}, {"name": "KUULIA", "lat": 59.82046347, "lon": 23.67829304}, {"name": "MUNIN", "lat": 59.97974905, "lon": 25.5352011}, {"name": "KAARIA", "lat": 59.82064471, "lon": 23.67665261}, {"name": "TYKKI", "lat": 59.82041816, "lon": 23.67597661}, {"name": "033JOTAIN", "lat": 59.81866457, "lon": 23.67300219}, {"name": "PERASIN", "lat": 59.82082143, "lon": 23.67663458}, {"name": "LAATIKKO", "lat": 59.82038644, "lon": 23.67501218}, {"name": "PERASIN 1", "lat": 59.82133343, "lon": 23.66683705}, {"name": "KEULA 27M", "lat": 59.82283316, "lon": 23.66733278}, {"name": "KEULAOSA", "lat": 59.82000129, "lon": 23.66566531}, {"name": "PERASIN 2", "lat": 59.82150108, "lon": 23.66366434}, {"name": "HYLKYTAVARAA", "lat": 59.82033207, "lon": 23.67866259}, {"name": "TYKKI", "lat": 59.82033207, "lon": 23.67700413}, {"name": "Gordyij", "lat": 59.79583224, "lon": 24.35458445}, {"name": "Wasa keula", "lat": 59.80201216, "lon": 24.06828367}, {"name": "GORDYIJ PERA", "lat": 59.7955239, "lon": 24.35456642}, {"name": "GORDYIJ KEULA", "lat": 59.79608164, "lon": 24.35486386}, {"name": "MELKIN HYLKY", "lat": 60.13106817, "lon": 24.88235349}, {"name": "TYKKI", "lat": 59.8201916, "lon": 23.67760803}, {"name": "PARRUT", "lat": 59.81945301, "lon": 23.67766211}, {"name": "Wasa pera", "lat": 59.80228417, "lon": 24.06731924}, {"name": "Konari", "lat": 60.00679917, "lon": 24.97659731}, {"name": "Akkari", "lat": 59.90341551, "lon": 24.79383315}, {"name": "JUKTEN", "lat": 59.98516445, "lon": 24.62100172}, {"name": "HVAL", "lat": 60.05128613, "lon": 24.98065333}, {"name": "HIENO HYLKY", "lat": 59.79869791, "lon": 22.9295161}, {"name": "SCHILLER", "lat": 59.78863526, "lon": 22.36521586}, {"name": "Kuparihylky", "lat": 59.94656547, "lon": 24.48431392}, {"name": "Edmund", "lat": 59.94894875, "lon": 24.50870411}, {"name": "KULTA K OIKEA", "lat": 60.20183448, "lon": 25.5916789}, {"name": "METSKARIN GALEONI", "lat": 59.86383432, "lon": 22.30633149}, {"name": "SYSTRARNA", "lat": 60.05460224, "lon": 24.65413488}, {"name": "JUKTEN OHJAUSKOYSI 7M", "lat": 59.98631415, "lon": 24.62348941}, {"name": "KULTAKALEERI", "lat": 60.20168219, "lon": 25.59128231}, {"name": "ENGELSMAN LEHTI", "lat": 59.82133797, "lon": 23.66945994}, {"name": "Mologna", "lat": 59.85850318, "lon": 23.35970636}, {"name": "Brannskarin hylky", "lat": 59.84559719, "lon": 23.27562061}, {"name": "Pohjoinen kotka", "lat": 59.98763513, "lon": 24.00523512}, {"name": "Linjatauluhylky", "lat": 59.94895778, "lon": 24.35960489}, {"name": "Engelsmans", "lat": 59.82283316, "lon": 23.66733278}, {"name": "Alca", "lat": 60.08663481, "lon": 25.40021683}, {"name": "Orion", "lat": 60.02049835, "lon": 24.87782877}, {"name": "Park Victory", "lat": 59.768578, "lon": 21.40150602}, {"name": "HARALD", "lat": 59.7453844, "lon": 21.275454}, {"name": "Harald keula", "lat": 59.74485306, "lon": 21.27559821}, {"name": "Tukkiproomu", "lat": 59.80485009, "lon": 21.42871739}, {"name": "HARPER", "lat": 59.74556151, "lon": 21.2755892}, {"name": "Ronnskarin tykit", "lat": 59.92892923, "lon": 24.39494633}, {"name": "Viljalaiva", "lat": 59.93750019, "lon": 24.40148102}, {"name": "Eira", "lat": 59.75216846, "lon": 23.2683378}, {"name": "Eggo", "lat": 59.8479153, "lon": 23.29935282}, {"name": "Eki", "lat": 59.87546664, "lon": 23.865636}, {"name": "Emilie", "lat": 60.08894959, "lon": 24.9881164}, {"name": "Bengtskarin lautakasa", "lat": 59.7301902, "lon": 22.45938758}, {"name": "Fivetown london", "lat": 60.2420506, "lon": 26.48899623}, {"name": "Sparta", "lat": 59.7387534, "lon": 21.88692122}, {"name": "Alfred", "lat": 59.87324545, "lon": 22.16415454}, {"name": "Garpen", "lat": 59.83674888, "lon": 22.75066374}, {"name": "Gustaf Adolf", "lat": 60.05061567, "lon": 24.92621256}, {"name": "Aleksander II", "lat": 60.12590114, "lon": 25.25798581}, {"name": "Coolaroo kone", "lat": 60.01749862, "lon": 24.87518785}, {"name": "Lauri", "lat": 60.14640738, "lon": 24.84796747}, {"name": "Tiilihylky", "lat": 60.07706832, "lon": 25.01174947}, {"name": "Coolaroo keula", "lat": 60.01783644, "lon": 24.87684632}, {"name": "Emilie", "lat": 60.08894959, "lon": 24.9881164}, {"name": "Chrysant", "lat": 60.20780018, "lon": 25.61752925}, {"name": "Coolaroo pera", "lat": 60.01784996, "lon": 24.87324998}, {"name": "Klasu", "lat": 59.82798429, "lon": 24.34743684}, {"name": "Algo", "lat": 59.95704975, "lon": 24.37042995}, {"name": "Hindenburg", "lat": 60.09875078, "lon": 21.69580166}, {"name": "Uunihylky", "lat": 59.94935046, "lon": 24.41908414}, {"name": "Keulakuva", "lat": 59.86146754, "lon": 22.76933043}, {"name": "056", "lat": 59.94714325, "lon": 24.48415168}, {"name": "055", "lat": 59.9285905, "lon": 24.40231026}, {"name": "058", "lat": 60.01729593, "lon": 24.87544924}, {"name": "057", "lat": 60.0516686, "lon": 24.98043701}, {"name": "059", "lat": 59.98632768, "lon": 24.62416542}, {"name": "DIANA POIJU", "lat": 60.19002977, "lon": 25.39296107}, {"name": "060", "lat": 59.80227511, "lon": 24.06761668}, {"name": "020", "lat": 59.8290579, "lon": 24.49576992}, {"name": "031", "lat": 60.08687304, "lon": 25.39980222}, {"name": "029", "lat": 60.08684158, "lon": 25.3997932}, {"name": "017", "lat": 59.8195663, "lon": 23.6658636}, {"name": "JEMINNA", "lat": 59.7860817, "lon": 23.57725313}, {"name": "018", "lat": 59.81983364, "lon": 23.6663323}, {"name": "019", "lat": 59.8512835, "lon": 24.4427803}, {"name": "044", "lat": 59.76880037, "lon": 21.40135279}, {"name": "HELSINGFORS", "lat": 59.7450665, "lon": 22.39043527}, {"name": "JUKKA", "lat": 59.74285024, "lon": 22.63716735}, {"name": "049", "lat": 59.923866, "lon": 24.40137286}];
+        
+        // Create map centered on waypoints
+        const map = L.map('map').setView([59.89583445888889, 24.055272561388886], 8);
+        
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(map);
+        
+        // Add waypoint markers
+        const markers = [];
+        waypoints.forEach(function(waypoint, index) {
+            const marker = L.marker([waypoint.lat, waypoint.lon])
+                .addTo(map)
+                .bindPopup(
+                    '<div style="font-weight: bold;">' + waypoint.name + '</div>' +
+                    '<div>Lat: ' + waypoint.lat.toFixed(4) + '</div>' +
+                    '<div>Lon: ' + waypoint.lon.toFixed(4) + '</div>'
+                );
+            markers.push(marker);
+        });
+        
+        // Fit map to show all markers
+        if (markers.length > 0) {
+            const group = new L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
+        
+        // Update waypoint count
+        document.getElementById('waypoint-count').textContent = waypoints.length;
+    </script>
+</body>
+</html>
